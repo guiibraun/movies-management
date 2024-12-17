@@ -18,5 +18,5 @@ function view($view, $data = [], $layout = 'default')
 {
 
   extract($data);
-  require "views/layouts/{$layout}.php";
+  require "../app/views/layouts/{$layout}.php";
 }

@@ -18,7 +18,7 @@ foreach ($routes as $key => $val) {
 
 
 if (isset($controller)) {
-  require "controllers/{$controller}.controller.php";
+  require "../app/controllers/{$controller}.controller.php";
 } else {
   echo '404';
 }
