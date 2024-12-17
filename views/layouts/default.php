@@ -9,8 +9,7 @@
 </head>
 
 <body>
-  <?php require("views/{$view}") ?>
-
+  <?php require("views/{$view}.view.php") ?>
   <script type="module" src="javascript/main.js"></script>
 </body>
 
