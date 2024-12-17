@@ -13,7 +13,7 @@ return [
   ],
   [
     'PATH' => '/session',
-    'CONTROLLER' => 'session/index',
+    'CONTROLLER' => 'users/session/index',
     'METHOD' => 'GET'
   ]
 ];
