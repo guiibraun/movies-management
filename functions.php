@@ -25,3 +25,10 @@ function image($file)
 {
   return "/assets/images/{$file}";
 }
+
+function config($key)
+{
+  $config = require '../configs.php';
+
+  return $config[$key];
+}
