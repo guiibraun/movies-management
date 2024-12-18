@@ -9,9 +9,9 @@ $method = $_SERVER['REQUEST_METHOD'];
 $controller;
 
 foreach ($routes as $key => $val) {
-  if ($val['PATH'] === $path && $val['METHOD'] === $method) {
+  if ($val['path'] === $path && $val['method'] === $method) {
 
-    $controller = $val['CONTROLLER'];
+    $controller = $val['controller'];
     break;
   }
 }

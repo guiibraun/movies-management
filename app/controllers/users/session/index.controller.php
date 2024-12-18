@@ -1,3 +1,3 @@
 <?php
 
-view(view: 'session/index', layout: 'login');
+view(view: 'users/session/index', layout: 'login');

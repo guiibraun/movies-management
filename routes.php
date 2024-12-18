@@ -2,18 +2,23 @@
 
 return [
   [
-    'PATH' => '/',
-    'CONTROLLER' => 'main/index',
-    'METHOD' => 'GET'
+    'path' => '/',
+    'controller' => 'main/index',
+    'method' => 'GET'
   ],
   [
-    'PATH' => '/sobre',
-    'CONTROLLER' => 'about/index',
-    'METHOD' => 'GET'
+    'path' => '/sobre',
+    'controller' => 'about/index',
+    'method' => 'GET'
   ],
   [
-    'PATH' => '/session',
-    'CONTROLLER' => 'users/session/index',
-    'METHOD' => 'GET'
+    'path' => '/session',
+    'controller' => 'users/session/index',
+    'method' => 'GET'
+  ],
+  [
+    'path' => '/login',
+    'controller' => 'users/session/new',
+    'method' => 'POST'
   ]
 ];
