@@ -20,5 +20,15 @@ return [
     'path' => '/session',
     'controller' => 'users/session/new',
     'method' => 'POST'
+  ],
+  [
+    'path' => '/registration',
+    'controller' => 'users/registration/index',
+    'method' => 'GET'
+  ],
+  [
+    'path' => '/registration',
+    'controller' => 'users/registration/new',
+    'method' => 'POST'
   ]
 ];
