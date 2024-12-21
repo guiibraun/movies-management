@@ -17,7 +17,7 @@ return [
     'method' => 'GET'
   ],
   [
-    'path' => '/login',
+    'path' => '/session',
     'controller' => 'users/session/new',
     'method' => 'POST'
   ]

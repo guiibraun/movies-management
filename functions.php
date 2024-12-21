@@ -32,3 +32,8 @@ function config($key)
 
   return $config[$key];
 }
+
+function redirect($path){
+  header("location: {$path}");
+  exit;
+}
