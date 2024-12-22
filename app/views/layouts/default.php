@@ -9,7 +9,8 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="bg-slate-950 text-white">
+<body class=" text-white">
+  <?php require_once("../app/views/partials/_alert.php") ?>
   <?php require("../app/views/{$view}.view.php") ?>
 
   <script type="module" src="/assets/javascript/main.js"></script>

@@ -33,7 +33,13 @@ function config($key)
   return $config[$key];
 }
 
-function redirect($path){
+function redirect($path)
+{
   header("location: {$path}");
   exit;
+}
+
+function flash()
+{
+  return new Flash();
 }
