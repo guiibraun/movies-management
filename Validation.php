@@ -23,7 +23,9 @@ class Validation
   public function rejected()
   {
     if (count($this->errors) > 0) {
-      flash()->set('error', $this->errors, 'error');
+      foreach ($this->errors as $error) {
+        flash()->set($error['name'], $error['message'], 'error');
+      }
 
       return true;
     }
@@ -41,10 +43,24 @@ class Validation
 
   public function email(string $field, string $value)
   {
-    if (filter_var($value, FILTER_VALIDATE_EMAIL)) {
+    if (!filter_var($value, FILTER_VALIDATE_EMAIL)) {
       $this->errors[] = [
         'name' => "{$field}_error",
         'message' => 'E-mail inválido'
+      ];
+    }
+  }
+
+  public function unique(string $field, string $value)
+  {
+    $db = new Database(config('database'));
+
+    $user = $db->query(query: 'SELECT email FROM users WHERE email = :email', params: ['email' => $value])->fetch();
+
+    if ($user) {
+      $this->errors[] = [
+        'name' => "{$field}_error",
+        'message' => 'E-mail em uso'
       ];
     }
   }
