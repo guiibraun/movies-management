@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -34,12 +34,20 @@
     </a>
 
     <nav>
-      <ul>
+      <ul class="flex items-center gap-x-4">
         <li>
           <a href="/">
             Explorar
           </a>
         </li>
+
+        <?php if (auth()) : ?>
+          <li>
+            <a href="/user/movies">
+              Meus filmes
+            </a>
+          </li>
+        <?php endif ?>
       </ul>
     </nav>
 

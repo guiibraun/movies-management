@@ -30,5 +30,10 @@ return [
     'path' => '/registration',
     'controller' => 'users/registration/new',
     'method' => 'POST'
+  ],
+  [
+    'path' => '/user/movies',
+    'controller' => 'users/movies/index',
+    'method' => 'GET'
   ]
 ];
