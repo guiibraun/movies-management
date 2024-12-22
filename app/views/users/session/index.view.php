@@ -5,6 +5,10 @@
     </div>
     <div class="flex items-center justify-center p-4">
       <div class="max-w-80 w-full">
+        <div role="tablist" class="tabs tabs-boxed mb-12">
+          <a role="tab" class="tab tab-active" href="/session">Login</a>
+          <a role="tab" class="tab " href="/registration">Cadastro</a>
+        </div>
         <h1 class="font-black text-4xl mb-5">Acesse sua conta</h1>
         <form action="/session" class="space-y-4" method="POST">
           <div>

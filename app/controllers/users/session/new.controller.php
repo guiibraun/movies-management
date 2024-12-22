@@ -23,5 +23,6 @@ if (!password_verify($password, $user->password)) {
   redirect('/session');
 }
 
+$_SESSION['auth'] = $user;
 
 redirect('/');

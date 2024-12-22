@@ -6,6 +6,10 @@
 
     <div class="flex flex-col items-center justify-center p-4">
       <div class="max-w-80 w-full">
+        <div role="tablist" class="tabs tabs-boxed mb-12">
+          <a role="tab" class="tab" href="/session">Login</a>
+          <a role="tab" class="tab tab-active" href="/registration">Cadastro</a>
+        </div>
         <h1 class="font-black text-4xl mb-5">Crie sua conta</h1>
         <form action="/registration" class="space-y-4" method="POST">
           <div>
