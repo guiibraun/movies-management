@@ -7,9 +7,15 @@
       <div class="max-w-80 w-full">
         <h1 class="font-black text-4xl mb-5">Acesse sua conta</h1>
         <form action="/session" class="space-y-4" method="POST">
-          <input type="text" name="email" id="email" placeholder="E-mail">
-          <input type="password" name="password" id="password" placeholder="Senha">
-          <button class="btn btn-primary w-full">Entrar</button>
+          <div>
+            <input type="text" name="email" id="email" placeholder="E-mail">
+            <?php if ($validation = flash()->get('email_error')) : ?><p class="text-xs mt-1 text-red-500"><?= $validation['message'] ?></p><?php endif ?>
+          </div>
+          <div>
+            <input type="password" name="password" id="password" placeholder="Senha">
+            <?php if ($validation = flash()->get('password_error')) : ?><p class="text-xs mt-1 text-red-500"><?= $validation['message'] ?></p><?php endif ?>
+          </div>
+          <button class="btn btn-primary w-full">Criar</button>
         </form>
       </div>
     </div>

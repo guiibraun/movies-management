@@ -10,6 +10,8 @@ $configs = require '../configs.php';
 
 require '../Database.php';
 
+require '../app/models/User.php';
+
 require '../Validation.php';
 
 require '../router.php';

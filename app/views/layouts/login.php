@@ -10,6 +10,7 @@
 </head>
 
 <body class="bg-gray-950 text-white">
+  <?php require_once("../app/views/partials/_alert.php") ?>
   <?php require("../app/views/{$view}.view.php") ?>
 
   <script type="module" src="/assets/javascript/main.js"></script>
