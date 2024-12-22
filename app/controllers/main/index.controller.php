@@ -1,2 +1,8 @@
 <?php
-view('main/index');
+$search = $_GET['query'] ?? '';
+
+$movies = Movie::all($search);
+
+view('main/index', [
+  'movies' => $movies
+]);

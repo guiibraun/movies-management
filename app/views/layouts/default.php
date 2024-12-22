@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class=" text-white">
+<body class="antialiased text-white">
   <header class="border-b border-gray-700 h-20 flex justify-between items-center px-20">
     <a href="/">
       <svg width="46" height="30" viewBox="0 0 46 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@
     <nav>
       <ul>
         <?php if (auth()) : ?>
-          Olá, <?= $_SESSION['auth']['name'] ?>
+          Olá, <?= auth()->name ?>
         <?php else : ?>
           <a href="/session">Login</a>
         <?php endif ?>

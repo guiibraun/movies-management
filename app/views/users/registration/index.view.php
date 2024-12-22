@@ -13,15 +13,15 @@
         <h1 class="font-black text-4xl mb-5">Crie sua conta</h1>
         <form action="/registration" class="space-y-4" method="POST">
           <div>
-            <input type="text" name="name" id="name" placeholder="Nome">
+            <input type="text" name="name" id="name" placeholder="Nome" class="input input-bordered w-full">
             <?php if ($validation = flash()->get('name_error')) : ?><p class="text-xs mt-1 text-red-500"><?= $validation['message'] ?></p><?php endif ?>
           </div>
           <div>
-            <input type="text" name="email" id="email" placeholder="E-mail">
+            <input type="text" name="email" id="email" placeholder="E-mail" class="input input-bordered w-full">
             <?php if ($validation = flash()->get('email_error')) : ?><p class="text-xs mt-1 text-red-500"><?= $validation['message'] ?></p><?php endif ?>
           </div>
           <div>
-            <input type="password" name="password" id="password" placeholder="Senha">
+            <input type="password" name="password" id="password" placeholder="Senha" class="input input-bordered w-full">
             <?php if ($validation = flash()->get('password_error')) : ?><p class="text-xs mt-1 text-red-500"><?= $validation['message'] ?></p><?php endif ?>
           </div>
           <button class="btn btn-primary w-full">Criar</button>

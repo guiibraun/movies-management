@@ -7,9 +7,12 @@ module.exports = {
         center: true,
         padding: "0.75rem",
       },
-
+      backgroundImage: {
+        "custom-gradient":
+          "linear-gradient(180deg, rgba(9, 9, 16, 0) 0%, rgba(9, 9, 16, 0.9) 72.94%)",
+      },
     },
   },
 
-  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography")],
 };
