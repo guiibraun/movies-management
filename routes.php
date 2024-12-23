@@ -2,6 +2,11 @@
 
 return [
   [
+    'path' => '/movies/:id',
+    'controller' => 'movies/show',
+    'method' => 'GET'
+  ],
+  [
     'path' => '/',
     'controller' => 'main/index',
     'method' => 'GET'
@@ -35,5 +40,5 @@ return [
     'path' => '/user/movies',
     'controller' => 'users/movies/index',
     'method' => 'GET'
-  ]
+  ],
 ];

@@ -6,12 +6,17 @@ $path = parse_url(($_SERVER['REQUEST_URI']))['path'];
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-$controller;
+$controller = null;
 
 foreach ($routes as $key => $val) {
-  if ($val['path'] === $path && $val['method'] === $method) {
+  $pattern = preg_replace('/:\w+/', '(\w+)', $val['path']);
+  $pattern = '#^' . $pattern . '$#';
 
+  if ($val['method'] === $method && preg_match($pattern, $path, $matches)) {
     $controller = $val['controller'];
+    array_shift($matches);
+    $params = $matches;
+
     break;
   }
 }
