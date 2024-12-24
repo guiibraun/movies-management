@@ -10,6 +10,7 @@ class Movie
   public $user_id;
   public $cover;
   public $category;
+  public $category_id;
 
 
   public static function all($search = '')
@@ -39,5 +40,14 @@ class Movie
     (movies.title LIKE :search OR description LIKE :search)', class: Movie::class, params: ['search' => "%{$search}%", 'id' => $id])->fetchAll();
 
     return $movies;
+  }
+
+  public static function find($id)
+  {
+    $db = new Database(config('database'));
+
+    $movie = $db->query(query: 'SELECT movies.title, movies.description, movies.release_year, categories.name as category FROM movies LEFT JOIN categories ON categories.id = movies.category_id WHERE movies.id = :id', params: ['id' => $id], class: Movie::class)->fetch();
+
+    return $movie;
   }
 }

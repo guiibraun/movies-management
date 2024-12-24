@@ -17,5 +17,6 @@ require '../Database.php';
 require '../Validation.php';
 
 require '../app/models/Movie.php';
+require '../app/models/Category.php';
 
 require '../router.php';

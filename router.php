@@ -7,6 +7,7 @@ $path = parse_url(($_SERVER['REQUEST_URI']))['path'];
 $method = $_SERVER['REQUEST_METHOD'];
 
 $controller = null;
+$params = null;
 
 foreach ($routes as $key => $val) {
   $pattern = preg_replace('/:\w+/', '(\w+)', $val['path']);
@@ -20,7 +21,6 @@ foreach ($routes as $key => $val) {
     break;
   }
 }
-
 
 if (isset($controller)) {
   require "../app/controllers/{$controller}.controller.php";
