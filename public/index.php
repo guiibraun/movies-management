@@ -1,10 +1,10 @@
 <?php
+const PUBLIC_DIR = __DIR__ . '/';
+const BASE_DIR = __DIR__ . '/../';
 
 require '../app/models/User.php';
 
 session_start();
-
-
 
 require '../Flash.php';
 

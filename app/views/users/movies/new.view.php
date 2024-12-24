@@ -1,7 +1,7 @@
 <main>
   <section class="max-w-4xl mx-auto px-3 w-full my-20">
     <h1 class="text-2xl font-bold mb-4">Novo filme</h1>
-    <form action="" class="flex flex-col gap-4">
+    <form class="flex flex-col gap-4" action="/user/movies" method="POST" enctype="multipart/form-data">
       <div>
         <input type="text" name="title" id="title" placeholder="Título" class="input input-bordered w-full">
         <?php if ($validation = flash()->get('title_error')) : ?><p class="text-xs mt-1 text-red-500"><?= $validation['message'] ?></p><?php endif ?>
@@ -25,7 +25,7 @@
               Categoria
             </option>
             <?php foreach ($categories as $category) : ?>
-              <option value="<?= $category->name ?>"><?= $category->name ?></option>
+              <option value="<?= $category->id ?>"><?= $category->name ?></option>
             <?php endforeach ?>
           </select>
           <?php if ($validation = flash()->get('category_error')) : ?><p class="text-xs mt-1 text-red-500"><?= $validation['message'] ?></p><?php endif ?>
@@ -40,6 +40,7 @@
       <div>
         <label for="cover" class="block mb-2">Capa do filme</label>
         <input type="file" name="cover" id="cover" class="file-input file-input-bordered w-full">
+        <?php if ($validation = flash()->get('category_error')) : ?><p class="text-xs mt-1 text-red-500"><?= $validation['message'] ?></p><?php endif ?>
       </div>
 
       <div class="flex gap-2 self-end">

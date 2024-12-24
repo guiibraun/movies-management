@@ -53,3 +53,13 @@ function auth()
 
   return $_SESSION['auth'];
 }
+
+function base_path($path)
+{
+  return BASE_DIR . $path;
+}
+
+function base_public($path)
+{
+  return PUBLIC_DIR . $path;
+}

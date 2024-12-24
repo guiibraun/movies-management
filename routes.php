@@ -45,5 +45,10 @@ return [
     'path' => '/user/movies/new',
     'controller' => 'users/movies/new',
     'method' => 'GET'
+  ],
+  [
+    'path' => '/user/movies',
+    'controller' => 'users/movies/create',
+    'method' => 'POST'
   ]
 ];

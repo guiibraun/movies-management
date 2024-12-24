@@ -2,7 +2,7 @@
   <section class="my-20 container flex gap-12">
     <div class="h-[480px] max-w-96 w-full relative rounded-xl overflow-hidden">
       <div class="bg-custom-gradient inset-0  absolute w-full h-full z-10"></div>
-      <img src="<?= image('/movie-card.png') ?>" alt="" class="absolute w-full h-full z-0 pointer-events-none object-cover" />
+      <img src="/<?= $movie->cover ?>" alt="" class="absolute w-full h-full z-0 pointer-events-none object-cover" />
     </div>
     <div class="flex flex-col justify-evenly">
       <div>

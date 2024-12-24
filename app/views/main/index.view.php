@@ -8,9 +8,10 @@
     <?php if (count($movies) > 0) : ?>
       <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <?php foreach ($movies as $movie) : ?>
+
           <a href="/movies/<?= $movie->id ?>" class="h-[480px] w-full relative rounded-xl overflow-hidden flex items-end">
             <div class="bg-custom-gradient inset-0  absolute w-full h-full z-10"></div>
-            <img src="<?= image('/movie-card.png') ?>" alt="" class="absolute w-full h-full z-0 pointer-events-none object-cover" />
+            <img src="<?= $movie->cover ?>" alt="" class="absolute w-full h-full z-0 pointer-events-none object-cover" />
             <div class="absolute top-5 right-5 z-20 bg-[#0f0f1a]/80 rounded-fil flex items-center gap-1.5 px-2.5 py-1.5 rounded-full">
               <div class="text-xs font-medium text-gray-300">
                 <span class="text-xl font-bold">4,5</span> / 5
